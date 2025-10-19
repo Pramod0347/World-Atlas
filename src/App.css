@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+
+/* Optional: register your font (Urbanist) */
+@font-face {
+  font-family: "Urbanist";
+  src: url("/Urbanist-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+/* Your globals placed in the base layer */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  :root {
+    --bg-color: #202020;
+  }
+
+
+  html {
+    font-size: 62.5%;
+    font-family: "Urbanist", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  }
+
+
+  body {
+    background-color: #000;
+    /* or var(--bg-color) if you prefer */
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #fff;
+  }
+
+
+  p,
+  li,
+  a,
+  button {
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+
+  li {
+    list-style: none;
+  }
+
+
+  a {
+    color: #000;
+  }
+
+  a:hover {
+    color: #2e86c1;
+    /* native CSS nesting isn’t required */
+  }
+
+
+  button {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    padding: 0.6rem 2.4rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    /* reset first */
+    text-transform: unset;
+    transition: all 0.3s ease-in-out;
+    background: #202020;
+    color: #fff;
+    border-radius: 1.5rem;
+
+
+    /* Explicit border so it’s visible on dark bg */
+    border: 0.1rem solid #3a3a3a;
+
+
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    margin-top: 1.6rem;
+  }
+}
+
+
+/* You can still use Tailwind utilities wherever you like */
+.btn-primary {
+  @apply inline-flex items-center gap-3 rounded-2xl bg-neutral-800 px-6 py-2 text-white transition hover:bg-neutral-700;
+}
