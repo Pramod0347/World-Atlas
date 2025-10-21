@@ -1,10 +1,10 @@
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './components/Layout/AppLayout.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
-import Country from './pages/country.jsx';
+import Country from './pages/Country.jsx';
 import CountryDetails from './components/Layout/CountryDetails.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 
